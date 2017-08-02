@@ -10,13 +10,6 @@ namespace EFCoreDBProviders.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly LivroRepository _repository;
-
-        public HomeController([FromServices]LivrosSqlServerContext context)
-        {
-            _repository = new LivroRepository(context);
-        }
-
         public IActionResult Index()
         {
             return View();
